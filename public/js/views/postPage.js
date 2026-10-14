@@ -6,8 +6,10 @@ import { postDetail } from '../components/post.js';
 import { postGrid } from '../components/grid.js';
 import { notFoundPage } from './profile.js';
 
-export default async function postPage(root, { id }) {
-  root.innerHTML = icons.spinner();
+export default async function postPage(view, { id }) {
+  // Own wrapper so the mobile back header above it stays in place
+  const root = h(`<div>${icons.spinner()}</div>`);
+  view.append(root);
   let post;
   try {
     ({ post } = await api.get(`/posts/${id}`));

@@ -113,6 +113,23 @@ store.on('me:changed', () => {
   qsa('[data-nav=profile]').forEach((a) => a.setAttribute('href', `/${store.me.username}`));
 });
 
+// Phone-only header with a back arrow on inner pages, like Instagram's app
+const MOBILE_TITLES = [
+  [/^\/p\//, 'Post'],
+  [/^\/notifications$/, 'Notifications'],
+  [/^\/accounts\/edit$/, 'Edit profile'],
+  [/^\/explore\/tags\//, 'Hashtag'],
+];
+function mobileHeader(path) {
+  const title = MOBILE_TITLES.find(([re]) => re.test(path))?.[1];
+  if (!title) return;
+  const bar = document.createElement('div');
+  bar.className = 'mobile-header mobile-only';
+  bar.innerHTML = `<button type="button" class="icon-btn" aria-label="Back">${icons.back()}</button><h1>${title}</h1><span></span>`;
+  bar.querySelector('button').addEventListener('click', () => (history.length > 1 ? history.back() : navigate('/')));
+  view.append(bar);
+}
+
 // ---------- Routing ----------
 defineRoutes(
   [
@@ -137,6 +154,7 @@ defineRoutes(
     highlightNav();
     const route = match(path);
     if (!route) return notFoundPage(view);
+    mobileHeader(path);
     try {
       cleanup = await route.view(view, route.params);
     } catch (err) {
