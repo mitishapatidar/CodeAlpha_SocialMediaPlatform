@@ -280,6 +280,7 @@ a.tag { color: var(--link); }
 .grid-overlay span { display: flex; align-items: center; gap: 6px; }
 .grid-overlay .icon { width: 20px; height: 20px; }
 .grid-tile:hover .grid-overlay { opacity: 1; }
+.explore-layout { grid-auto-flow: dense; }
 .explore-layout .grid-tile:nth-child(10n + 3), .explore-layout .grid-tile:nth-child(10n + 6) { grid-row: span 2; aspect-ratio: auto; }
 
 /* ===== Profile ===== */
@@ -463,3 +464,4 @@ a.tag { color: var(--link); }
   .story-brand { display: none; }
   .story-close { z-index: 5; top: 26px; }
 }
+.nav-badge[hidden] { display: none; }

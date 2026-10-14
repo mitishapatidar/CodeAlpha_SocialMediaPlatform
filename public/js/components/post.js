@@ -443,7 +443,7 @@ export function postDetail(rawPost, { onDeleted, inModal = false } = {}) {
               ${avatar(post.author, 32, { link: true })}
               <div class="comment-body">
                 <div class="comment-text">${userLink(post.author)} <span>${linkify(post.caption)}</span></div>
-                <div class="comment-meta"><time>${timeAgo(post.createdAt)}</time>${post.updatedAt !== post.createdAt ? '<span>Edited</span>' : ''}</div>
+                <div class="comment-meta"><time>${timeAgo(post.createdAt)}</time>${post.editedAt ? '<span>Edited</span>' : ''}</div>
               </div>
             </div>`));
         }

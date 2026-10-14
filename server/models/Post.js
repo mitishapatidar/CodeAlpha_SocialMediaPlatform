@@ -14,6 +14,7 @@ const postSchema = new mongoose.Schema(
     commentsCount: { type: Number, default: 0 },
     hideLikes: { type: Boolean, default: false },
     commentsOff: { type: Boolean, default: false },
+    editedAt: { type: Date },
   },
   { timestamps: true }
 );

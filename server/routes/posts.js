@@ -117,6 +117,7 @@ router.put('/:id', async (req, res) => {
   if (caption !== undefined) {
     post.caption = String(caption).trim();
     post.hashtags = Post.parseHashtags(post.caption);
+    post.editedAt = new Date();
   }
   if (location !== undefined) post.location = String(location).trim();
   if (hideLikes !== undefined) post.hideLikes = bool(hideLikes);

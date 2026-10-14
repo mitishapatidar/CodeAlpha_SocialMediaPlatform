@@ -37,7 +37,7 @@ function serializePost(post, viewer) {
     isMine: String(authorId) === String(viewerId),
     isFollowingAuthor: idIn(viewer?.following, authorId),
     createdAt: post.createdAt,
-    updatedAt: post.updatedAt,
+    editedAt: post.editedAt,
   };
 }
 
