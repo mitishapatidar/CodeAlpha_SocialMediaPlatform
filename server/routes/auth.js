@@ -58,7 +58,7 @@ router.post('/logout', (req, res) => {
 
 // GET /api/auth/me  → the logged-in user
 router.get('/me', requireAuth, (req, res) => {
-  res.json({ user: { ...req.user.toProfile(req.user._id), email: req.user.email } });
+  res.json({ user: { ...req.user.toProfile(req.user._id), email: req.user.email, gender: req.user.gender } });
 });
 
 // PUT /api/auth/password  { currentPassword, newPassword }
