@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login • Instaclone</title>
+  <link rel="icon" href="/img/logo.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Grand+Hotel&display=swap" />
+  <link rel="stylesheet" href="/css/base.css" />
+  <link rel="stylesheet" href="/css/auth.css" />
+  <script>try { const t = localStorage.getItem('theme'); if (t) document.documentElement.dataset.theme = t; } catch (e) {}</script>
+</head>
+<body>
+  <div class="auth-page">
+    <main class="auth-main">
+      <section class="auth-hero" aria-hidden="true">
+        <img class="logo-mark" src="/img/logo.svg" alt="" />
+        <h1>See everyday moments from your <span class="gradient-text">close friends</span>.</h1>
+        <div class="collage">
+          <div class="phone phone-left"><span class="emoji">🌴</span></div>
+          <div class="phone phone-main"><span class="emoji">🤳</span></div>
+          <div class="phone phone-right"><span class="emoji">🎸</span></div>
+          <div class="sticker sticker-emoji">🔮👀🤯</div>
+          <div class="sticker sticker-heart">❤️</div>
+          <div class="sticker sticker-star">★ ✓</div>
+          <div class="sticker sticker-avatar"><span>🙂</span></div>
+        </div>
+      </section>
+
+      <section class="auth-panel">
+        <div class="auth-card">
+          <div class="mobile-logo wordmark">Instaclone</div>
+          <h2>Log into Instaclone</h2>
+
+          <form id="login-form" novalidate>
+            <div class="field">
+              <input id="identifier" name="identifier" type="text" placeholder=" " autocomplete="username" autocapitalize="off" required />
+              <label for="identifier">Mobile number, username or email</label>
+            </div>
+            <div class="field">
+              <input id="password" name="password" type="password" placeholder=" " autocomplete="current-password" required />
+              <label for="password">Password</label>
+              <button type="button" class="toggle-password" hidden>Show</button>
+            </div>
+            <button class="btn btn-primary btn-auth" type="submit" disabled>Log in</button>
+            <p class="auth-error" id="auth-error" role="alert"></p>
+          </form>
+
+          <a class="auth-link" href="#" id="forgot-link">Forgot password?</a>
+
+          <button class="btn btn-soft btn-auth" type="button" id="demo-login">👋 Log in with demo account</button>
+          <a class="btn btn-outline btn-auth" href="/signup">Create new account</a>
+          <p class="auth-brand">Made for CodeAlpha</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="auth-footer">
+      <a href="#">About</a><a href="#">Blog</a><a href="#">Jobs</a><a href="#">Help</a><a href="#">API</a>
+      <a href="#">Privacy</a><a href="#">Terms</a><a href="#">Locations</a><a href="#">Popular</a>
+      <span>© 2026 Instaclone — CodeAlpha Task 2</span>
+    </footer>
+  </div>
+
+  <script type="module" src="/js/auth.js"></script>
+</body>
+</html>

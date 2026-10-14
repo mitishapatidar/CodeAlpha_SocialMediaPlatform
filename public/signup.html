@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign up • Instaclone</title>
+  <link rel="icon" href="/img/logo.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Grand+Hotel&display=swap" />
+  <link rel="stylesheet" href="/css/base.css" />
+  <link rel="stylesheet" href="/css/auth.css" />
+  <script>try { const t = localStorage.getItem('theme'); if (t) document.documentElement.dataset.theme = t; } catch (e) {}</script>
+</head>
+<body>
+  <div class="auth-page">
+    <main class="auth-main">
+      <section class="auth-hero" aria-hidden="true">
+        <img class="logo-mark" src="/img/logo.svg" alt="" />
+        <h1>Share photos and stories with the <span class="gradient-text">people you love</span>.</h1>
+        <div class="collage">
+          <div class="phone phone-left"><span class="emoji">🍕</span></div>
+          <div class="phone phone-main"><span class="emoji">📸</span></div>
+          <div class="phone phone-right"><span class="emoji">🐶</span></div>
+          <div class="sticker sticker-emoji">😍🔥✨</div>
+          <div class="sticker sticker-heart">💖</div>
+          <div class="sticker sticker-star">★ ✓</div>
+          <div class="sticker sticker-avatar"><span>😎</span></div>
+        </div>
+      </section>
+
+      <section class="auth-panel">
+        <div class="auth-card">
+          <div class="mobile-logo wordmark">Instaclone</div>
+          <h2>Get started on Instaclone</h2>
+          <p class="subtitle">Sign up to see photos and videos from your friends.</p>
+
+          <form id="signup-form" novalidate>
+            <div class="field">
+              <input id="email" name="email" type="email" placeholder=" " autocomplete="email" required />
+              <label for="email">Email address</label>
+              <span class="field-status" data-for="email"></span>
+            </div>
+            <div class="field">
+              <input id="fullName" name="fullName" type="text" placeholder=" " autocomplete="name" maxlength="60" />
+              <label for="fullName">Full name</label>
+            </div>
+            <div class="field">
+              <input id="username" name="username" type="text" placeholder=" " autocomplete="username" autocapitalize="off" maxlength="30" required />
+              <label for="username">Username</label>
+              <span class="field-status" data-for="username"></span>
+            </div>
+            <div class="field">
+              <input id="password" name="password" type="password" placeholder=" " autocomplete="new-password" required />
+              <label for="password">Password</label>
+              <button type="button" class="toggle-password" hidden>Show</button>
+            </div>
+            <p class="auth-small">People who use our service may have uploaded your contact information to Instaclone. By signing up, you agree to our Terms and Privacy Policy.</p>
+            <button class="btn btn-primary btn-auth" type="submit" disabled>Sign up</button>
+            <p class="auth-error" id="auth-error" role="alert"></p>
+          </form>
+
+          <div class="auth-divider" style="margin-top: 28px">OR</div>
+          <a class="btn btn-outline btn-auth" href="/login">I already have an account</a>
+          <p class="auth-brand">Made for CodeAlpha</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="auth-footer">
+      <a href="#">About</a><a href="#">Blog</a><a href="#">Jobs</a><a href="#">Help</a><a href="#">API</a>
+      <a href="#">Privacy</a><a href="#">Terms</a><a href="#">Locations</a><a href="#">Popular</a>
+      <span>© 2026 Instaclone — CodeAlpha Task 2</span>
+    </footer>
+  </div>
+
+  <script type="module" src="/js/auth.js"></script>
+</body>
+</html>

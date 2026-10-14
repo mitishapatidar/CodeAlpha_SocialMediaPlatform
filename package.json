@@ -1,0 +1,37 @@
+{
+  "name": "codealpha_socialmediaplatform",
+  "version": "1.0.0",
+  "description": "Instagram-style mini social media platform - CodeAlpha Full Stack Internship Task 2 (Express.js + MongoDB + vanilla JS)",
+  "main": "server/server.js",
+  "scripts": {
+    "start": "node server/server.js",
+    "dev": "nodemon server/server.js",
+    "seed": "node server/seed.js"
+  },
+  "keywords": [
+    "social-media",
+    "instagram-clone",
+    "express",
+    "mongodb",
+    "codealpha"
+  ],
+  "author": "Mitisha Patidar",
+  "license": "MIT",
+  "type": "commonjs",
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "cookie-parser": "^1.4.7",
+    "dotenv": "^18.0.8",
+    "express": "^5.3.0",
+    "jsonwebtoken": "^9.0.3",
+    "mongodb-memory-server": "^11.3.0",
+    "mongoose": "^9.11.2",
+    "multer": "^2.4.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
